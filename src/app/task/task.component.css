@@ -22,3 +22,9 @@
 .bg-5 {
   background-color: #fff;
 }
+
+.delete-button {
+	position: relative;
+	left: 250px;
+	top: 10px;
+}
