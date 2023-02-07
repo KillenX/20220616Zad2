@@ -1,0 +1,21 @@
+header {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  background: #eee;
+  height: 50px;
+  font: 3em sans-serif;
+}
+
+.toolbar {
+  display: flex;
+}
+
+.toolbar-item {
+  width: 50%;
+  font-size: 2em;
+  border: 5px black;
+  border-style: solid;
+  height: 40px;
+  padding: 5px;
+}
