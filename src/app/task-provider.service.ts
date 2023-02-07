@@ -8,10 +8,10 @@ export class TaskProviderService {
 	private storageKey = "tasks"
 
 	private storeTasks(tasks: Task[]) {
-		localStorage.setItem(this.storageKey, JSON.stringify(tasks))
+		sessionStorage.setItem(this.storageKey, JSON.stringify(tasks))
 	}
 	getTasks(): Task[] {
-		const stored = localStorage.getItem(this.storageKey)
+		const stored = sessionStorage.getItem(this.storageKey)
 		if (stored) {
 			return JSON.parse(stored)
 		}
