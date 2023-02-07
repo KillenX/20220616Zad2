@@ -19,3 +19,9 @@ header {
   height: 40px;
   padding: 5px;
 }
+
+main {
+  border: 5px black;
+  border-style: none solid solid solid;
+  border-collapse: collapse;
+}

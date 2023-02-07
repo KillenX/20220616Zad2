@@ -1,1 +1,33 @@
-<p>new-task works!</p>
+<form #taskForm="ngForm">
+  <label for="title">Naslov</label>
+  <input name="title" type="text" [(ngModel)]="task.title" required />
+  <br />
+  <label for="description">Opis</label>
+  <input name="description" [(ngModel)]="task.description" type="text" />
+  <br />
+  <label for="date">Datum</label>
+  <input name="date" type="date" [(ngModel)]="task.date" required />
+  <br />
+  <label for="priority">Prioritet</label>
+  <input
+    name="priority"
+    type="number"
+    min="1"
+    max="5"
+    [(ngModel)]="task.priority"
+    required
+    input
+  />
+  <br />
+  <label for="type">Vrsta</label>
+  <select required [(ngModel)]="task.type" name="type">
+    <option value="Posao">Posao</option>
+    <option value="Kuca">Kuca</option>
+    <option value="Ostalo">Ostalo</option>
+  </select>
+  <br />
+  <button type="button" [disabled]="!taskForm.valid" (click)="onSubmit(); taskForm.reset()">
+    Napravi novi zadatak
+  </button>
+  <p>{{ task | json }}</p>
+</form>

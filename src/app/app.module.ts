@@ -5,18 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { NewTaskComponent } from './new-task/new-task.component';
+import { FormsModule } from '@angular/forms';
+import { TaskProviderService } from './task-provider.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     TasksComponent,
-    NewTaskComponent
+    NewTaskComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [TaskProviderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
