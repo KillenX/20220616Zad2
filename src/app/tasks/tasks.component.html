@@ -1,1 +1,5 @@
-<p>tasks works!</p>
+<div class="card-holder">
+  <div *ngFor="let task of tasks">
+    <app-task [task]="task" (taskDeleted)="deleteTask($event)"></app-task>
+  </div>
+</div>

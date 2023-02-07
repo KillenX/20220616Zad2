@@ -4,22 +4,18 @@ import { NewTaskComponent } from './new-task/new-task.component';
 import { TasksComponent } from './tasks/tasks.component';
 
 const routes: Routes = [
-  // {
-  //   path: 'zadaci',
-  //   component: TasksComponent
-  // },
-  {
-    path: 'novi-zadatak',
-    component: NewTaskComponent
-  },
-  {
-    path: '**',
-    component: TasksComponent
-  }
+	{
+		path: 'novi-zadatak',
+		component: NewTaskComponent
+	},
+	{
+		path: '**',
+		component: TasksComponent
+	}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+	imports: [RouterModule.forRoot(routes)],
+	exports: [RouterModule]
 })
 export class AppRoutingModule { }

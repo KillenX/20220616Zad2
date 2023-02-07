@@ -5,14 +5,29 @@ import { Task } from 'src/task.type';
 	providedIn: 'root'
 })
 export class TaskProviderService {
-	private tasks: Task[] = []
-	constructor() { }
+	private storageKey = "tasks"
+
+	private storeTasks(tasks: Task[]) {
+		localStorage.setItem(this.storageKey, JSON.stringify(tasks))
+	}
+	getTasks(): Task[] {
+		const stored = localStorage.getItem(this.storageKey)
+		if (stored) {
+			return JSON.parse(stored)
+		}
+		return []
+	}
 
 	addTask(task: Task) {
-		this.tasks.push(task)
+		const tasks = this.getTasks()
+		tasks.push(task)
+		this.storeTasks(tasks)
 	}
 
-	getTasks() {
-		return this.tasks
+	deleteTask(deletedTask: Task) {
+		let tasks = this.getTasks()
+		tasks = tasks.filter((task) => task.title != deletedTask.title)
+		this.storeTasks(tasks)
 	}
+
 }
