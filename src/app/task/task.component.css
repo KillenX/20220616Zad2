@@ -6,3 +6,19 @@
   border-style: solid;
   margin: 20px;
 }
+
+.bg-1 {
+  background-color: #777;
+}
+.bg-2 {
+  background-color: #999;
+}
+.bg-3 {
+  background-color: #bbb;
+}
+.bg-4 {
+  background-color: #ddd;
+}
+.bg-5 {
+  background-color: #fff;
+}
