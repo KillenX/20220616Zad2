@@ -24,7 +24,8 @@
 }
 
 .delete-button {
-	position: relative;
-	left: 250px;
-	top: 10px;
+  position: relative;
+  left: 225px;
+  top: 10px;
+  width: 75px;
 }
